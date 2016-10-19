@@ -3,6 +3,8 @@
  */
 import React, {Component} from "react";
 import ZHIHU_URL from "../config";
+import "../res/css/details.css";
+
 
 export default class Details extends Component {
 
@@ -24,9 +26,28 @@ export default class Details extends Component {
                     isLoading: false,
                     data: json
                 });
+
             }).catch(function (ex) {
             console.log('parsing failed', ex)
         })
+    }
+
+    toHtml() {
+        var css = this.state.data.css.map(item=> {
+            return ("<link rel=\"stylesheet\" href=\"" + item + "\"/>")
+        })
+
+        var html = ""
+        for (var i = 0; i < css.length; i++) {
+            console.log(css[i])
+            html += css[i]
+        }
+        html += this.state.data.body
+
+        html = html.replace("<div class=\"img-place-holder\"></div>", "")
+
+
+        return {__html: html};
     }
 
     render() {
@@ -38,8 +59,12 @@ export default class Details extends Component {
             );
         } else {
             return (
-                <div>
-                    {this.state.data.body.replace("\\", "")}
+                <div className="page">
+                    <div className="container contenter">
+                        <img src={this.state.data.image}/>
+
+                        <div dangerouslySetInnerHTML={this.toHtml()}/>
+                    </div>
                 </div>
             );
         }

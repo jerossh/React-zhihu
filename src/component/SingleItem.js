@@ -3,7 +3,8 @@
  */
 import React, {Component} from "react";
 import {Card, CardMedia, CardText} from "material-ui/Card";
-// import sample from '../res/png/phone_sample.png'
+import {Link} from "react-router";
+import "../res/css/singleitem.css";
 
 export default class SingleItem extends Component {
 
@@ -11,8 +12,8 @@ export default class SingleItem extends Component {
         var url = "/news?id=" + this.props.id
 
         return (
-            <a href={url}>
-                <Card>
+            <Link href={url}>
+                <Card className="card">
                     <CardMedia >
                         <img src={this.props.img}/>
                     </CardMedia>
@@ -20,7 +21,7 @@ export default class SingleItem extends Component {
                         {this.props.title}
                     </CardText>
                 </Card>
-            </a>
+            </Link>
         );
     }
 }

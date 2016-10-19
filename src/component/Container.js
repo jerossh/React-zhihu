@@ -8,12 +8,18 @@ import FontIcon from "material-ui/FontIcon";
 
 
 export default class Container extends Component {
+
+    _clickTitle() {
+        window.location = "/";
+    }
+
     render() {
         return (
             <div>
                 <header>
                     <AppBar
                         title="知乎日报"
+                        onTitleTouchTap={this._clickTitle}
                         iconElementLeft={<div></div>}
                         iconElementRight={
                             <div>

@@ -51,13 +51,13 @@ export default class GridView extends Component {
                     <div className="col-md-4 col-xs-12 col-sm-6"><SingleItem title={item["title"]} img={item["image"]}
                                                                              id={item["id"]}/></div>);
             });
-            result.push(result2)
+            result.concat(result2)
 
             var row = [];
             for (var i = 0, len = result.length; i < len; i += 3) {
                 row.push(result.slice(i, i + 3));
             }
-
+            console.log(row)
             result = [];
             for (var i = 0; i < row.length; i++) {
                 result.push(<div className="row" style={margin}>{row[i]}</div>);
