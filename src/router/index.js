@@ -10,10 +10,12 @@ import Details from "../component/Details";
 
 const RouterConfig = (
     <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+        {/*这里只是适应Github page*/}
         <Redirect from="/" to="/React-zhihu" />
+        <Redirect from="/news" to="/React-zhihu/news" />
         <Route path="/React-zhihu" component={Container}>
             <IndexRoute component={Main}/>
-            <Route path="/news" component={Details}/>
+            <Route path="news" component={Details}/>
         </Route>
     </Router>);
 

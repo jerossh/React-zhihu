@@ -9,7 +9,7 @@ import "../res/css/singleitem.css";
 export default class SingleItem extends Component {
 
     render() {
-        var url = "/news?id=" + this.props.id
+        var url = "news?id=" + this.props.id
 
         return (
             <Link href={url}>
