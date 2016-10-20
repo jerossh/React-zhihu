@@ -3,14 +3,15 @@
  * 路由
  */
 import React from "react";
-import {Router, IndexRoute, Route, browserHistory} from "react-router";
+import {Router, IndexRoute, Route, browserHistory,Redirect } from "react-router";
 import Main from "../component/Main";
 import Container from "../component/Container";
 import Details from "../component/Details";
 
 const RouterConfig = (
     <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
-        <Route path="/" component={Container}>
+        <Redirect from="/" to="/React-zhihu" />
+        <Route path="/React-zhihu" component={Container}>
             <IndexRoute component={Main}/>
             <Route path="/news" component={Details}/>
         </Route>
