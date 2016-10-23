@@ -1,3 +1,8 @@
 .introduction_container {
     background-color: dodgerblue;
 }
+
+.download {
+    height: 100%;
+    text-align: center;
+}

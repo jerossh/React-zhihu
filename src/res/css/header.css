@@ -1,0 +1,15 @@
+.newContent {
+    text-align: right;
+    float: right;
+    margin-right: 3em;
+    font-size: 2em;
+}
+
+.readContent {
+    font-size: 2em;
+    margin-left: 3em;
+}
+
+.contentHeader {
+    margin-top: 2em;
+}

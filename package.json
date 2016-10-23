@@ -2,7 +2,7 @@
   "name": "ZhiHu",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kutear.github.io/React-zhihu",
+  "homepage": "http://zhihu.kutear.com/",
   "devDependencies": {
     "react-scripts": "0.6.1"
   },

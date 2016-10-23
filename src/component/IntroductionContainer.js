@@ -27,7 +27,7 @@ export default class IntroductionContainer extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="row download">
                                 <div className="col-md-12 col-md-offset-2">
                                     <Download/>
                                 </div>

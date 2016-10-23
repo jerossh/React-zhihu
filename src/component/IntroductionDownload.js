@@ -3,13 +3,16 @@
  */
 import React, {Component} from "react";
 import QR from "../res/png/qr_top2.png";
-import ActionAndroid from "material-ui/svg-icons/action/android";
 import RaisedButton from "material-ui/RaisedButton";
 
 
 const style = {
     margin: 12,
 };
+
+const btn = {
+    width: 20
+}
 export default class IntroductionDownload extends Component {
     render() {
         return (
@@ -20,10 +23,10 @@ export default class IntroductionDownload extends Component {
 
                 <div className="col-md-4 col-sm-6 col-xs-6">
                     <div className="row" style={style}>
-                        <RaisedButton label="Android" labelPosition="after" icon={<ActionAndroid/>}/>
+                        <RaisedButton label="Android" style={btn}/>
                     </div>
                     <div className="row" style={style}>
-                        <RaisedButton label="IOS" labelPosition="after"/>
+                        <RaisedButton label="IOS" style={btn}/>
                     </div>
                 </div>
             </div>
